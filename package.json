@@ -1,0 +1,30 @@
+{
+  "name": "SQolites",
+  "version": "1.0.0",
+  "description": "Suivi de l'évolution d'Ips typographus...",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qambium/SQolites.git"
+  },
+  "author": "Marc Muller",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Qambium/SQolites/issues"
+  },
+  "homepage": "https://github.com/Qambium/SQolites#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "connect": "^3.6.6",
+    "grunt": "^1.0.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.4.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "serve-static": "^1.13.2"
+  }
+}

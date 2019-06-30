@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app = "SQolites" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Qambium | SQolties</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="dist/SQolites.min.css">
+
+  </head>
+  <body>
+
+    <div ng-controller = "MapController" class="wrapper">
+
+      <div class="sidebar d-flex flex-column justify-content-start bg-light">
+
+
+        <div class="">
+          <h3 class = "sidebar-brand">SQolites</h3>
+          <p class = "text-muted">Suivi de l'évolution d'<i>Ips typographus</i>
+            <br>
+            <a href="https://qambium.fr">en savoir plus...</a>
+          </p>
+        </div>
+
+        <div class="align-self-stretch">
+          <form>
+            <div class="form-group">
+              <label>Forêt : </label>
+              <select ng-model = "foret" class="form-control">
+                <option ng-repeat = "foret in config.forets"  value="{{foret.code}}">{{foret.nom}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Fonds : </label>
+              <ul class = "list-group">
+                <li class = "list-group-item">
+                  <div class="form-check">
+                    <input ng-model = "fond" class="form-check-input" type="radio" value = "outdoor">
+                    <label class="form-check-label">
+                      Terrain
+                    </label>
+                  </div>
+                </li>
+                <li class = "list-group-item">
+                  <div class="form-check">
+                    <input ng-model = "fond" class="form-check-input" type="radio" value = "satellite">
+                    <label class="form-check-label">
+                      Satellite
+                    </label>
+                  </div>
+                </li>
+                <li class = "list-group-item">
+                  <div class="form-check">
+                    <input ng-model="showONFForets" class="form-check-input" type="checkbox" >
+                    <label class="form-check-label" >
+                      Forêts ONF
+                    </label>
+                  </div>
+                </li>
+                <li class = "list-group-item">
+                  <div class="form-check">
+                    <input ng-model="showONFParcelles" class="form-check-input" type="checkbox" >
+                    <label class="form-check-label" >
+                      Parcelles ONF
+                    </label>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="form-group">
+              <label>Couches : </label>
+              <ul class = "list-group">
+                <li ng-repeat = "couche in config.couches" class = "list-group-item">
+                  <div class="form-check">
+                    <input ng-model="couche.display" ng-change = "updateCouches()" class="form-check-input" type="checkbox" >
+                    <label class="form-check-label" >
+                      <span ng-style = "" ></span> {{couche.nom}}
+                    </label>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </form>
+        </div>
+
+        <div class="mt-auto text-center">
+          <!-- <div class="footer text-muted"> -->
+            <a href="https://qambium.fr">Qambium</a>
+            <br>
+            Marc Muller - 2019
+          <!-- </div> -->
+        </div>
+
+      </div>
+
+      <div id = "map"></div>
+
+    </div>
+
+
+
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js" ></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+  <script src="dist/SQolites.js"></script>
+
+</html>

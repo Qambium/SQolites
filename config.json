@@ -1,0 +1,33 @@
+{
+  "forets" : [
+    {
+      "code" : "REVIN",
+      "nom" : "F.C Revin",
+      "center" : [49.883381, 4.587092]
+    },
+    {
+      "code" : "FRANCBRY",
+      "nom" : "F.D Francbois-Bryas",
+      "center" : [49.967343, 4.640436]
+    }
+  ],
+  "couches" : [
+    {
+      "code" : "E20181",
+      "nom" : "Début été 2018"
+    },
+    {
+      "code" : "E20182",
+      "nom" : "Fin été 2018"
+    },
+    {
+      "code" : "E20191",
+      "nom" : "Début été 2019"
+    }
+  ],
+  "couleurs" : {
+    "E20181" : "red",
+    "E20182" : "blue",
+    "E20191" : "green"
+  }
+}

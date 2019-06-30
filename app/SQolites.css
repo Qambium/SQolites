@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'PineForest';
+  src: url(fonts/PineForest.otf);
+}
+@font-face {
+  font-family: 'TreeHausHorror';
+  src: url(fonts/TreeHausHorror.ttf);
+}
+
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/sv…='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>") #fff;
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+}
+
+a {
+  color : inherit !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.wrapper{
+  height : 100%;
+  width : 100%;
+}
+
+.wrapper .sidebar {
+  position : fixed;
+  width : 350px;
+  top : 0;
+  bottom : 0;
+  background: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  z-index : 1001;
+  padding : 2rem;
+  border-right : 1px solid #ddd;
+}
+
+.wrapper .sidebar .sidebar-brand {
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'TreeHausHorror';
+  color : red;
+}
+.wrapper .sidebar .footer {
+  padding-bottom  : 2rem;
+}
+
+.wrapper #map {
+  position : absolute;
+  left : 350px;
+  right : 0;
+  top : 0;
+  bottom : 0;
+  height : 100%;
+  /* width : 100%; */
+
+}
