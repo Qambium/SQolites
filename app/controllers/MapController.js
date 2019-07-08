@@ -115,11 +115,11 @@ SQolites.controller('MapController', ['$rootScope', '$scope', '$http', function(
         style.color = $scope.config.couleurs[feature.properties['PERIODE']];
         style.fillOpacity = 1;
         style.fillColor = style.color;
-        return style;
+        return style
       },
       pointToLayer : function(geoJsonPoint, latlng) {
         console.log(latlng);
-        return L.circle(latlng, {radius: 10}); // L.circleMarker(latlng, 1);
+        return L.circle(latlng, {radius: 1}); // L.circleMarker(latlng, 1);
       },
       onEachFeature : function(feature, layer){
         $scope.layers.addLayer(layer);
@@ -142,7 +142,7 @@ SQolites.controller('MapController', ['$rootScope', '$scope', '$http', function(
     // Chargement des données.
     $http({
       method: 'GET',
-      url: 'data.geojson'
+      url: 'SQolites.geojson'
     }).then(function successCallback(response) {
 
       $scope.config.data = response.data.features;
