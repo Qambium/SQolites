@@ -1,5 +1,5 @@
 {
-  "name": "SQolites",
+  "name": "SQolytes",
   "version": "1.0.0",
   "description": "Suivi de l'évolution d'Ips typographus...",
   "main": "server.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Qambium/SQolites.git"
+    "url": "git+https://github.com/Qambium/SQolytes.git"
   },
   "author": "Marc Muller",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Qambium/SQolites/issues"
+    "url": "https://github.com/Qambium/SQolytes/issues"
   },
-  "homepage": "https://github.com/Qambium/SQolites#readme",
+  "homepage": "https://github.com/Qambium/SQolytes#readme",
   "dependencies": {},
   "devDependencies": {
     "connect": "^3.6.6",

@@ -1,1 +1,1 @@
-var SQolites = angular.module('SQolites', []);
+var SQolytes = angular.module('SQolytes', []);

@@ -6,8 +6,8 @@ grunt.initConfig({
   uglify: {
     my_target: {
       files: {
-        'dist/SQolites.min.js': [
-          'dist/SQolites.js'
+        'dist/SQolytes.min.js': [
+          'dist/SQolytes.js'
         ]
       }
     }
@@ -20,8 +20,8 @@ grunt.initConfig({
     },
     target: {
       files: {
-        'dist/SQolites.min.css': [
-          'app/SQolites.css'
+        'dist/SQolytes.min.css': [
+          'app/SQolytes.css'
         ]
       }
     }
@@ -39,7 +39,7 @@ grunt.initConfig({
         'app/services/*.js',
         'app/typologies/**/**/*.js',
       ],
-      dest : 'dist/SQolites.js'
+      dest : 'dist/SQolytes.js'
     }
 
   },

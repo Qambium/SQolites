@@ -1,5 +1,5 @@
-var SQolites = angular.module('SQolites', []);
-SQolites.controller('MapController', ['$rootScope', '$scope', '$http', function($rootScope, $scope, $http){
+var SQolytes = angular.module('SQolytes', []);
+SQolytes.controller('MapController', ['$rootScope', '$scope', '$http', function($rootScope, $scope, $http){
 
   // $scope.map = {
   //
@@ -143,7 +143,7 @@ SQolites.controller('MapController', ['$rootScope', '$scope', '$http', function(
     // Chargement des données.
     $http({
       method: 'GET',
-      url: 'SQolites.geojson'
+      url: 'SQolytes.geojson'
     }).then(function successCallback(response) {
 
       $scope.config.data = response.data.features;
