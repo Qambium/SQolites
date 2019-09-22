@@ -1,14 +1,22 @@
 {
   "forets" : [
     {
-      "code" : "REVIN",
-      "nom" : "F.C Revin",
-      "center" : [49.883381, 4.587092]
-    },
-    {
       "code" : "FRANCBRY",
       "nom" : "F.D Francbois-Bryas",
-      "center" : [49.967343, 4.640436]
+      "center" : [49.967343, 4.640436],
+      "zoom" : 15
+    },
+    {
+      "code" : "REVIN1",
+      "nom" : "F.C Revin - Mannesarts/Eperons",
+      "center" : [49.883381, 4.587092],
+      "zoom" : 15
+    },
+    {
+      "code" : "REVIN2",
+      "nom" : "F.C Revin - Malgré-Tout",
+      "center" : [49.931113135569234, 4.704380035400391],
+      "zoom" : 13
     }
   ],
   "couches" : [
@@ -23,11 +31,16 @@
     {
       "code" : "E20191",
       "nom" : "Début été 2019"
+    },
+    {
+      "code" : "E20192",
+      "nom" : "Fin été 2019"
     }
   ],
   "couleurs" : {
     "E20181" : "red",
     "E20182" : "blue",
-    "E20191" : "green"
+    "E20191" : "green",
+    "E20192" : "orange"
   }
 }

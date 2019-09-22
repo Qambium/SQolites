@@ -49,7 +49,7 @@ SQolytes.controller('MapController', ['$rootScope', '$scope', '$http', function(
   $scope.$watch('foret', function(foret){
     $scope.config.forets.forEach(function(f){
       if(f.code == foret){
-        $scope.map.setView(L.latLng(f.center), 15);
+        $scope.map.setView(L.latLng(f.center), f.zoom);
       }
     });
   });

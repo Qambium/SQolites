@@ -36,6 +36,7 @@ a {
   z-index : 1001;
   padding : 2rem;
   border-right : 1px solid #ddd;
+  overflow-y: scroll;
 }
 
 .wrapper .sidebar .sidebar-brand {
