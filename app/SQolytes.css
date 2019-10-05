@@ -26,7 +26,7 @@ a {
   width : 100%;
 }
 
-.wrapper .sidebar {
+/* .wrapper .sidebar {
   position : fixed;
   width : 350px;
   top : 0;
@@ -37,25 +37,25 @@ a {
   padding : 2rem;
   border-right : 1px solid #ddd;
   overflow-y: scroll;
-}
+} */
 
 .wrapper .sidebar .sidebar-brand {
   font-size: 3rem;
-  text-align: center;
+  /* text-align: center; */
   font-family: 'TreeHausHorror';
   color : red;
 }
-.wrapper .sidebar .footer {
+/* .wrapper .sidebar .footer {
   padding-bottom  : 2rem;
-}
+} */
 
-.wrapper #map {
+#map {
   position : absolute;
-  left : 350px;
+  left : 0;
   right : 0;
-  top : 0;
+  top : 55px;
   bottom : 0;
-  height : 100%;
+
   /* width : 100%; */
 
 }
