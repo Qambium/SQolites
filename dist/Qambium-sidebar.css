@@ -1,0 +1,181 @@
+/* La police Qambium par défaut est Lato */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,900&display=swap');
+
+
+body {
+  font-family: 'Lato';
+  font-size: 1rem;
+  font-weight: 300;
+  color : #212529;
+}
+
+h1, h2,h3,h4,h5,h6{
+  /* font-family: 'Lato'; */
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color : #6c757d;
+}
+
+
+/*-------- La navbar */
+
+.wrapper .navbar {
+  position: fixed;
+  display : flex;
+  flex-wrap : wrap;
+  align-items : center;
+  justify-content : space-between;
+  transition: .3s;
+  height : 55px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  padding : 0 .5rem;
+
+  background-color: #f8f9fa!important;
+  border-bottom : 1px solid #ddd;
+  /* color : #FFFFFF80; */
+}
+  .wrapper .navbar .navbar-title {
+    margin : 0;
+    margin-right : auto;
+    margin-left : 1rem;
+    font-size: 1.2rem;
+  }
+
+
+/*-------- La Sidebar */
+
+
+.wrapper .sidebar {
+  z-index : 1001;
+  position: fixed;
+  width : 250px;
+  top : 0;
+  left : -250px;
+  bottom : 0;
+  overflow-y: scroll;
+  transition: .3s;
+  background-color: rgba(255,255,255,.95);
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+  .sidebar .sidebar-header {
+    margin-top : 1rem;
+    margin-bottom : 2rem;
+    padding-left : 2rem;
+    padding-right : 1rem;
+    /* padding-top : 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+
+  }
+
+    .sidebar .sidebar-header .sidebar-title{
+      margin : 0;
+    }
+
+    .wrapper .sidebar-header .closeSidebar {
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+  .sidebar-content nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  flex-direction: column!important;
+  }
+
+  .sidebar-content nav a {
+    display: block;
+    padding: .5rem 1rem;
+    padding-left : 2rem;
+  }
+
+  .sidebar-content nav a.active {
+    color : #212529;
+    border-right : 3px solid #68A357;
+  }
+
+
+/*-------- Le contenu de la page */
+
+
+.wrapper .page {
+  z-index: 800;
+  position: absolute;
+  transition: .3s;
+  width : 100%;
+  min-height : 100%;
+  left : 0;
+  padding : 8rem;
+  padding-top : calc(2rem + 55px);
+  transition: .3s;
+}
+
+
+
+/*=======================*/
+/* La Navbar est ouverte */
+/*=======================*/
+
+
+.wrapper.open .navbar {
+  left: 250px;
+}
+
+  .wrapper.open .navbar .sidebarToggle {
+    display: none;
+    margin-right : 4rem
+  }
+
+.wrapper.open .sidebar {
+  top : 0;
+  left : 0;
+  /* box-shadow : 0 .5rem .5rem rgba(0,0,0,.15)!important; */
+  border-right : 1px solid #ddd;
+}
+
+
+.wrapper.open .page {
+  left : 250px;
+  width : calc(100vw - 250px);
+}
+
+
+/*=======================*/
+/* Sur mobile            */
+/*=======================*/
+
+
+@media (max-width: 992px){
+
+  .wrapper .navbar {
+    left: 0;
+  }
+
+  .wrapper .page {
+    left : 0;
+    padding : 1rem;
+    padding-top : calc(2rem + 55px);
+  }
+
+  .wrapper.open .page {
+    left : 0;
+    width : calc(100vw );
+  }
+
+  /* .wrapper.open .closeSidebar{
+    display: none;
+  } */
+
+}
